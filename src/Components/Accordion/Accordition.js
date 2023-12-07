@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Minus } from "../../Icons/Minus";
 import { Plus } from "../../Icons/Plus";
 import styles from "../../style/card.module.css";
+import { motion } from "framer-motion";
 
-const Accordion = ({ title, content, ScrollTrigger}) => {
+const Accordion = ({ title, content, ScrollTrigger }) => {
   const [collapse, setCollapse] = useState(false);
 
   return (
@@ -24,9 +25,15 @@ const Accordion = ({ title, content, ScrollTrigger}) => {
           )}
         </div>
         {collapse && (
-          <div className={styles.reveal}>
-            {content}
-          </div>
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="p-4"
+          >
+            <div className={styles.reveal}>{content}</div>
+          </motion.div>
         )}
       </div>
     </>

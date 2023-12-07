@@ -10,6 +10,7 @@ import Brainwallet from "../assets/Mask group (3).png";
 import paperwallet from "../assets/note_2471170.png";
 import walletmanage from "../assets/stakeholders_6774987.png";
 import Accordion from "./Accordion/Accordition";
+import {motion} from "framer-motion";
 
 export default function Card2() {
   const ref = useRef(null);
@@ -49,6 +50,7 @@ export default function Card2() {
               <img className={styles.mobile} src={mobile} alt="img1" />
               </div>
               <div className={styles.box}>
+              
                 <Accordion
                   ScrollTrigger={ScrollTrigger}
                   title="Software Wallet" 
@@ -56,6 +58,7 @@ export default function Card2() {
 Online Wallets: Web-based wallets that you can access through a browser.
 Both types are connected to the internet and can therefore be exploded, so that the keys can be stollen or phished"
                 ></Accordion>
+                
               </div>
             </div>
             <div className={styles.cards}>
