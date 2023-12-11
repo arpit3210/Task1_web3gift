@@ -4,6 +4,9 @@ import { Plus } from "../../Icons/Plus";
 import styles from "../../style/card.module.css";
 import { motion } from "framer-motion";
 
+
+// Accordion Component
+
 const Accordion = ({ title, content, ScrollTrigger }) => {
   const [collapse, setCollapse] = useState(false);
 
